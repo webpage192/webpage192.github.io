@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViTCM-LLM: A Multimodal RAG Framework for Advanced TCM Clinical Decision Support</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ViTCM-LLM: A Multimodal RAG Framework for Advanced TCM Clinical Decision Support</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Authors
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Institution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/ViTCM_LLM-45C7/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Coming Soon)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/ViTCM-LLM-framework-1.png" alt="ViTCM-LLM Framework" style="max-width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        We introduce <span class="dnerf">ViTCM-LLM</span>: To diagnose like a real TCM physician
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Traditional Chinese Medicine (TCM) diagnosis, particularly methods like tongue diagnosis, faces significant challenges in subjectivity and scalability. The application of Large
+            Language Models (LLMs) to fundamental aspect of TCM tasks
+            such as syndrome differentiation (Bian Zheng) and prescription
+            generation is significantly challenged by the difficulty of integrating visual tongue data with clinical text and the scarcity of
+            suitable public datasets.
+          </p>
+          <p>
+            To overcome these barriers, we introduce
+            ViTCM-LLM, a novel framework that emulates an expert's
+            diagnostic process by integrating multimodal language modeling
+            with Retrieval-Augmented Generation (RAG). Employing a dual-component architecture, ViTCM-LLM integrates a fine-tuned
+            Qwen2.5-VL model for visual analysis with a Qwen3-based RAG
+            for clinical reasoning.
+          </p>
+          <p>
+            The entire framework was developed and
+            validated on MedTCM, a new large-scale multimodal dataset we
+            introduce specifically for advanced TCM research. To properly
+            evaluate our framework's clinical accuracy, which existing metrics fail to capture, we also developed TDEU, a domain-specific
+            evaluation metric. Evaluated using this metric alongside standard benchmarks, our comprehensive experiments on MedTCM
+            demonstrate that ViTCM-LLM significantly outperforms leading
+            models, including GPT-4o and Gemini 2.5 Flash. These findings
+            not only establish the feasibility of a generalizable tongue diagnosis model but also validate the critical role of integrating visual
+            data for advanced TCM diagnostics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Work</h2>
+
+        <!-- Framework Overview. -->
+        <h3 class="title is-4">Framework Overview</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our work is divided into three stages. First is the Tongue Diagnosis Generator. This component uses a fine-tuned multimodal model (Qwen2.5-VL) to analyze a patient's tongue image and generate a single-sentence tongue diagnosis. It is specifically prompted to act as a Traditional Chinese Medicine (TCM) tongue diagnosis expert to ensure a structured and professional output.
+          </p>
+          <p>
+            The second stage is the Prescription Generator. This component uses an advanced Retrieval-Augmented Generation (RAG) framework based on the Qwen3 model. It combines the tongue diagnosis result from the first stage with the patient's other clinical information (chief complaint, present history, pulse diagnosis). This combined data is used to retrieve similar cases from a large clinical knowledge base of over 124,000 anonymized patient records. Based on the patient's data and the retrieved cases, the model generates a final output that includes a diagnosis, dialectical analysis, a specific herbal prescription with dosages, and the reasoning for the diagnosis.
+          </p>
+          <p>
+            Finally, we introduce a new, domain-specific evaluation metric called TDEU (Tongue Diagnosis Evaluation Unit). This metric is designed to overcome the limitations of standard text-comparison metrics like BLEU or ROUGE, which cannot capture the clinical nuances of TCM terminology.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/RAG_final.png" alt="ViTCM-LLM Framework" style="max-width: 100%; height: auto;">
+        </div>
+        <!--/ Framework Overview. -->
+
+
+      </div>
+    </div>
+    <!--/ Related Work. -->
+
+
+    <!-- Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Our results achieve SOTA performance in both objective evaluation metrics and Traditional Chinese Medicine expert evaluation.
+          </p>
+        </div>
+        
+        <div class="content has-text-centered">
+          <img src="./static/images/Result_table.png" alt="Results Table" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+          <img src="./static/images/Prescription_Generator_final_new.png" alt="Prescription Generator Results" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{vitcmllm2024,
+  author    = {Anonymous Authors},
+  title     = {ViTCM-LLM: A Multimodal RAG Framework for Advanced TCM Clinical Decision Support},
+  journal   = {arXiv preprint},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Our work is based on <a href="https://github.com/nerfies/nerfies.github.io">https://github.com/nerfies/nerfies.github.io</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
